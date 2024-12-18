@@ -1,0 +1,51 @@
+/* Contenedor de las tarjetas */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Crea columnas dinámicas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin: 20px;
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+    max-width: 1200px; /* Esto limita el tamaño máximo del contenedor (opcional) */
+    margin-left: auto;
+    margin-right: auto; /* Centra el contenedor */
+}
+
+/* Estilo de las tarjetas */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido dentro de la tarjeta esté bien alineado */
+    justify-content: space-between;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo de contenido dentro de la tarjeta */
+.card-content {
+    text-align: center;
+    padding: 10px; /* Espaciado dentro de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.card-price {
+    color: green;
+    font-size: 1.1rem;
+    margin-bottom: 10px; /* Espacio debajo del precio */
+}
+
+.card p {
+    margin: 5px 0;
+}

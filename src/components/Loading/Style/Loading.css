@@ -1,0 +1,32 @@
+.loading-overlay {
+    position: fixed; /* Posiciona la capa fija en toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y ligeramente transparente */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    z-index: 9999; /* Asegura que la capa de carga esté por encima de otros elementos */
+  }
+  
+  /* El texto de carga con efecto difuminado */
+  .loading-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    filter: blur(5px); /* Efecto de difuminado */
+    animation: unblur 4s forwards; /* Animación para eliminar el difuminado */
+  }
+  
+  /* Animación para hacer desaparecer el difuminado */
+  @keyframes unblur {
+    0% {
+      filter: blur(10px); /* Comienza difuminado */
+    }
+    100% {
+      filter: blur(0); /* Elimina el difuminado */
+    }
+  }
