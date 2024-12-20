@@ -4,9 +4,9 @@ import './Styles/ItemList.css'
 const ItemList = ({ products }) => (
     <div className="card-container">
         {
-            products.map(({ id, ...product }) => (
+            products.map(({...product}) => (
 
-                <Item product={product} key={id} />
+                <Item product={product} key={product.id} />
             ))
         }
     </div>
