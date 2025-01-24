@@ -1,42 +1,55 @@
-/* Contenedor principal */
-.detailItem {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
-    gap: 20px; /* Espacio entre la imagen y el contenido textual */
-    padding: 20px;
-    border: 1px solid #ccc; /* Borde opcional */
-    border-radius: 10px; /* Bordes redondeados */
-    background-color: #f9f9f9; /* Fondo suave */
-  }
-  
-  /* Estilo de la imagen */
-  .detailImage {
-    width: 200px; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 8px; /* Bordes redondeados en la imagen */
-  }
-  
-  /* Contenido de texto */
-  .detailText {
-    max-width: 500px; /* Limita el ancho del contenido textual */
-  }
-  
-  /* Estilo de los títulos */
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px; /* Espacio debajo del h1 */
-    color: #333; /* Color del texto */
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 8px; /* Espacio debajo del h2 */
-    color: #555; /* Color de texto más suave */
-  }
-  
-  h3 {
-    font-size: 16px;
-    color: #777; /* Color más claro para la descripción */
-    line-height: 1.5;
-  }
+.item-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 90vh;
+  padding: 100px 0;
+  box-sizing: border-box;
+}
+
+.images-detail-container {
+  display: flex;
+  width: 50%;
+}
+
+.images-detail-container .secondary-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.images-detail-container .secondary-images img {
+  width: 40%;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.images-detail-container .main-image {
+  width: 60%;
+}
+
+.images-detail-container .main-image img {
+  width: 90%;
+  border-radius: 5px;
+}
+
+.text-detail-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.title-detail {
+  padding: 10px 0;
+  font-size: 3rem;
+}
+
+.text-detail {
+  font-style: italic;
+  padding: 10px 0;
+  font-size: 1.3rem;
+  color: rgb(218, 218, 218);
+}

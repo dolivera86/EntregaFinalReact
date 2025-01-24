@@ -9,6 +9,16 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Elimina el subrayado */
+.linkCard {
+    text-decoration: none;
+}
+
+/* Aplica subrayado al pasar el mouse */
+.linkCard :hover {
+    text-decoration: underline;
+}
+
 /* Hover para la tarjeta */
 .card:hover {
     transform: translateY(-10px);

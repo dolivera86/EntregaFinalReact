@@ -1,15 +1,14 @@
 import CartNumber from './CartNumber'
 import { TiShoppingCart } from "react-icons/ti";
+import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
 
     return (
-        <div className="cart">
+        <Link to="/cart" className="cart">
             <TiShoppingCart />
-            <div className="cart-number">
-                <CartNumber/>
-            </div>
-        </div>
+            <CartNumber />
+        </Link>
     )
 }
 

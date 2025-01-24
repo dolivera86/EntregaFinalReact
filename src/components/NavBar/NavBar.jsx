@@ -1,33 +1,25 @@
 import CartWidget from './CartWidget'
 import fondotienda from '../../assets/img/fondotienda.jpg'
+import ClassNavbar from './ClassNavbar';
 import { Link, NavLink } from 'react-router-dom';
-import './navbar.css'
+import './Style/navbar.css'
 
 const NavBar = () => {
     return (
         <nav className="navbar">
-            <Link to='/'>
+            <Link to = '/' className = 'linkHome'>
                 <div className="brand">
                     <img src={fondotienda} alt="Imagen de la tienda" className='brandimg' />
-                    <h1>Estilo Sin Fronteras</h1>
+                    <h1 className = 'titleHome'>Estilo Sin Fronteras</h1>
                 </div>
             </Link>
             <ul className="categorias">
-                <li>
-                    <Link to='/'>Todo</Link>
-                </li>
-                <li>
-                    <Link to='/category/casual'>Casual</Link>
-                </li>
-                <li>
-                    <Link to='/category/urbano'>Urbano</Link>
-                </li>
-                <li>
-                    <Link to='/category/formal'>Formal</Link>
-                </li>
-                <li>
-                    <Link to='/category/deportivo'>Deportivo</Link>
-                </li>
+                    <NavLink to = '/' className = { ( { isActive } ) => ClassNavbar(isActive) } >Todo</NavLink>
+                    <NavLink to = '/category/casual' className = { ( { isActive } ) => ClassNavbar(isActive) } >Casual</NavLink>
+                    <NavLink to = '/category/urbano' className = { ( { isActive } ) => ClassNavbar(isActive) } >Urbano</NavLink>
+                    <NavLink to = '/category/formal' className = { ( { isActive } ) => ClassNavbar(isActive) } >Formal</NavLink>
+                    <NavLink to = '/category/deportivo' className = { ( { isActive } ) => ClassNavbar(isActive) } >Deportivo</NavLink>
+                    <NavLink to = '/category/verano' className = { ( { isActive } ) => ClassNavbar(isActive) } >Verano</NavLink>
             </ul>
 
             <CartWidget />

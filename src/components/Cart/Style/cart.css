@@ -1,0 +1,120 @@
+/* Contenedor principal */
+.cart-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Lista de productos */
+.cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Elemento individual del carrito */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Imagen del producto */
+.cart-item-image {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Contenedor de los detalles del producto */
+.cart-item-details {
+    flex: 1;
+    padding-left: 15px;
+}
+
+/* Nombre del producto */
+.cart-item-name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Cantidad y botones */
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-button {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quantity-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Precio del producto */
+.cart-item-price {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Botón de eliminar producto */
+.remove-button {
+    background-color: #ff4f4f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-button:hover {
+    background-color: #ff3333;
+}
+
+/* Sección del total */
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Precio total */
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Botón para realizar compra */
+.checkout-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+.stock-message {
+    font-size: 0.9rem;
+    color: red;
+    margin-left: 10px;
+    font-weight: bold;
+}

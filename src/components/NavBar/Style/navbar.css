@@ -1,0 +1,81 @@
+.navbar {
+    display: flex;
+    padding-block: 3rem;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+.linkHome {
+    text-decoration: none;
+}
+
+.titleHome {
+    font-size: 2rem;
+}
+
+.categorias {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.categorias li {
+    padding: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+}
+
+.brandimg {
+    width: 5rem;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.cart {
+    font-size: 35px;
+    color: blue;
+    margin-right: 4rem;
+    position: relative;
+}
+
+.cart-number.hidden {
+    display: none;
+}
+
+.cart-number {
+    content: '5';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.category {
+    color: white;
+    text-decoration: none;
+}
+
+.categoryActive {
+    color: peru;
+    text-decoration: none;
+}

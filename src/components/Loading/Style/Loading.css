@@ -6,6 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y ligeramente transparente */
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
     z-index: 9999; /* Asegura que la capa de carga esté por encima de otros elementos */
@@ -19,6 +20,7 @@
     text-align: center;
     filter: blur(5px); /* Efecto de difuminado */
     animation: unblur 4s forwards; /* Animación para eliminar el difuminado */
+    margin-bottom: 2rem;
   }
   
   /* Animación para hacer desaparecer el difuminado */

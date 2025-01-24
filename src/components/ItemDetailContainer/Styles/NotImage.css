@@ -1,0 +1,11 @@
+.no-image-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .no-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
