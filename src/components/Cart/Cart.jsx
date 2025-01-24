@@ -4,9 +4,7 @@ import EarlyReturn from "./EarlyReturn";
 import { Link } from "react-router-dom";
 import './Style/cart.css'
 
-
 const Cart = () => {
-
     const { cart, totalPrice, deleteProductById, deleteCart, updateQuantity } = useContext(CartContext);
 
     const handleRemove = (id) => {
@@ -31,8 +29,8 @@ const Cart = () => {
                         {cart.map((productShopCart) => (
                             <li key={productShopCart.id} className="cart-item">
                                 <img
-                                    src={productShopCart.image[0]}
-                                    alt={productShopCart.name} // Mejorar accesibilidad
+                                    src={productShopCart.image && productShopCart.image[0] ? productShopCart.image[0] : '/path/to/default-image.jpg'}
+                                    alt={productShopCart.name || 'Producto sin nombre'}
                                     className="cart-item-image"
                                 />
                                 <div className="cart-item-details">
@@ -76,4 +74,4 @@ const Cart = () => {
     );
 };
 
-export default Cart
+export default Cart;
