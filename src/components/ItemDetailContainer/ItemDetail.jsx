@@ -9,7 +9,6 @@ const ItemDetail = ({ article }) => {
     const [currentImage, setCurrentImage] = useState(null); // Inicializa como null
     const { includeProduct } = useContext(CartContext);
 
-    // Asegúrate de que `article` y `article.image` existen
     useEffect(() => {
         if (article && article.image && article.image.length > 0) {
             setCurrentImage(article.image[0]); // Establece la primera imagen si existe
@@ -31,7 +30,6 @@ const ItemDetail = ({ article }) => {
         <div className="item-detail">
             <div className="images-detail-container">
                 <div className="main-image">
-                    {/* Verifica si `currentImage` está definido y es una URL válida */}
                     {currentImage ? (
                         <img src={currentImage} alt="Imagen del artículo" />
                     ) : (

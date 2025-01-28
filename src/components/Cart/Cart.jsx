@@ -62,8 +62,7 @@ const Cart = () => {
                     </ul>
                     <div className="total-section">
                         <h3 className="total-price">Precio total: ${totalPrice()}</h3>
-                        <button className="checkout-button">Realizar compra</button>
-                        <Link to='/checkout'>Continuar con mi compra</Link>
+                        <Link to='/checkout' className="checkout-button">Continuar con mi compra</Link>
                     </div>
                     <div className="clear-cart">
                         <button onClick={handleClearCart} className="clear-cart-button">Vaciar carrito</button>

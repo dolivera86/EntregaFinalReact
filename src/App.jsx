@@ -33,6 +33,4 @@ function App() {
   )
 }
 
-// Crear y agregar Footer
-
 export default App

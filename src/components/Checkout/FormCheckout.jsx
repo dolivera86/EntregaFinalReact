@@ -1,7 +1,8 @@
+
 const FormCheckout = ({ dataForm, handleChangeInput, handleSubmitForm }) => {
     return (
         <form onSubmit={handleSubmitForm} className="form-checkout" >
-            <h2>Checkout</h2>
+            <h2>Formulario</h2>
             <div className="content-input">
                 <label className="label">Nombre completo: </label>
                 <input type="text" name="fullname" value={dataForm.fullname} onChange={handleChangeInput} />

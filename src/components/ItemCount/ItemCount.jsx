@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { FaPlus, FaMinus } from "react-icons/fa"
+import './Styles/itemCount.css'
 
 const ItemCount = ( { stock, includeProductsCart } ) => {
 
@@ -17,10 +19,10 @@ const ItemCount = ( { stock, includeProductsCart } ) => {
   return (
 
     <div>
-        <button onClick = { handleClickLess } >-</button>
+        <button onClick = { handleClickLess } className = "itemCount-btn itemCount-btn-less" ><FaMinus /></button>
         <p>{ count }</p>
-        <button onClick = { handleClickAdd } >+</button>
-        <button onClick = { () => includeProductsCart( count ) }>Agregar al Carrito</button>
+        <button onClick = { handleClickAdd } className = "itemCount-btn itemCount-btn-add" ><FaPlus /></button>
+        <button onClick = { () => includeProductsCart( count ) } className = "itemCount-btn itemCount-btn-cart" >Agregar al Carrito</button>
     </div>
   )
 }

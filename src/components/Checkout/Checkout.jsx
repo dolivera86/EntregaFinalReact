@@ -5,6 +5,8 @@ import { Timestamp, collection, addDoc } from "firebase/firestore"
 import { Link } from "react-router-dom"
 import db from "../../db/db.js";
 import validateForm from "../../utils/validateForm.js";
+import Loading from "../Loading/Loading.jsx";
+import './Style/checkout.css'
 
 const Checkout = () => {
   const [dataForm, setDataForm] = useState({
@@ -13,6 +15,8 @@ const Checkout = () => {
     email: ""
   })
   const [orderId, setOrderId] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [errors, setErrors] = useState(null)
   const { cart, totalPrice } = useContext(CartContext)
 
   const handleChangeInput = (event) => {
@@ -21,6 +25,7 @@ const Checkout = () => {
 
   const handleSubmitForm = async (event) => {
     event.preventDefault()
+    setLoading(true)
     const order = {
       buyer: { ...dataForm },
       products: [...cart],
@@ -28,13 +33,14 @@ const Checkout = () => {
       date: Timestamp.fromDate(new Date())
     }
 
-    //primeramente validamos el formulario
+    //validamos el formulario
     const response = await validateForm(dataForm)
-    if(response.status === "success"){
+    if (response.status === "success") {
       await uploadOrder(order)
-    }else{
-      console.log(response.message)
-      
+    } else {
+      setErrors(response.message)
+      setLoading(false)
+
     }
   }
 
@@ -43,13 +49,20 @@ const Checkout = () => {
       const ordersRef = collection(db, "orders")
       const response = await addDoc(ordersRef, newOrder)
       setOrderId(response.id)
+      setLoading(false)
+      setDataForm({
+        fullname: "",
+        phone: "",
+        email: ""
+      })
     } catch (error) {
-      console.log(error)
+      setLoading(false) // Desactiva el estado de carga
+      setErrors("Hubo un error al procesar la orden, por favor intente nuevamente.")
     }
   }
 
   return (
-    <div className="checkout">
+    <div className="checkoutPri">
       {
         orderId ? (
           <div>
@@ -61,6 +74,8 @@ const Checkout = () => {
           <FormCheckout dataForm={dataForm} handleChangeInput={handleChangeInput} handleSubmitForm={handleSubmitForm} />
         )
       }
+      {errors && <p className="error-message">{errors}</p>}
+      {loading && <Loading />}
     </div>
   )
 }
