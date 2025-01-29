@@ -2,6 +2,9 @@
 
 #### `Diego Olivera`
 
+https://cdn3d.iconscout.com/3d/free/thumb/free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.png?f=webp
+
+
 ## Descripción
 # Estilo Sin Fronteras - Tienda Online
 
@@ -32,3 +35,28 @@ Este proyecto es una tienda en línea llamada *Estilo Sin Fronteras*, donde los 
     src/db: Contiene la configuración de la base de datos Firebase.
     src/Styles: Archivos CSS para la estilización de los componentes.
     src/utils: Funciones auxiliares como la validación del formulario de checkout.
+
+# NOTA
+
+"Recuerdo que comentaron que no se debe subir las credenciales de FireBase a GuitHub pero al observar que en la nota cuandoo realizo la entrega no permite màs de cierta cantidad de caracteres.
+Por esa razón las agrego aquí como respaldo"
+
+-Espero que está acción no incida sobre la nota final-
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCcfkILR8O76bXp0DWNFcpbYoQW4qnXmr4",
+  authDomain: "ecomerce-react-do.firebaseapp.com",
+  projectId: "ecomerce-react-do",
+  storageBucket: "ecomerce-react-do.firebasestorage.app",
+  messagingSenderId: "901124400085",
+  appId: "1:901124400085:web:bd96aad7576f98c6f4135c"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
