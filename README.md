@@ -2,9 +2,6 @@
 
 #### `Diego Olivera`
 
-https://cdn3d.iconscout.com/3d/free/thumb/free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.png?f=webp
-
-
 ## Descripción
 # Estilo Sin Fronteras - Tienda Online
 
